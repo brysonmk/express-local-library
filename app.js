@@ -15,8 +15,8 @@ var app = express();
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const dev_db_url = "mongodb+srv://brysonkushner:8cbvHR3NyBDoEdk9@cluster0.6a6c0cr.mongodb.net/local_library?retryWrites=true&w=majority";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+require("dotenv").config();
+const mongoDB = process.env.MONGODB_URI || process.env.DEV_DB_URL;
 
 main().catch((err) => console.log(err));
 async function main() {
