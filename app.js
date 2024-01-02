@@ -11,7 +11,6 @@ const catalogRouter = require("./routes/catalog"); //Import routes for "catalog"
 var app = express();
 
 
-
 // Set up mongoose connection
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
@@ -23,7 +22,6 @@ main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
 }
-
 
 
 // view engine setup
